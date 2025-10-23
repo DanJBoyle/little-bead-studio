@@ -1,54 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Little Bead Studio — handmade beads and jewelry." />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Little Bead Studio</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css" />
-
-    <!-- Optional: JavaScript -->
-    <script defer src="main.js"></script>
-</head>
-<body>
-    <header>
-        <nav aria-label="Main navigation">
-            <a href="/" class="brand">Little Bead Studio</a>
-            <button aria-expanded="false" aria-controls="site-menu">Menu</button>
-            <ul id="site-menu" hidden>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <h1>Handmade beads & jewelry</h1>
-        <p>Welcome — replace this with your content.</p>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="year"></span> Little Bead Studio</p>
-    </footer>
-
-    <script>
-        // Small helpers
-        document.getElementById('year').textContent = new Date().getFullYear();
-        // Toggle menu for simple demo
-        const btn = document.querySelector('header button');
-        const menu = document.getElementById('site-menu');
-        btn.addEventListener('click', () => {
-            const open = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', String(!open));
-            menu.hidden = open;
-        });
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>little-bead-studio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

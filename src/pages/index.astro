@@ -1,1 +1,14 @@
-<h1>Hello</h1>
+---
+// File: index.astro
+// Description: Home page for Little Bead Studio website.
+// Author: Daniel Boyle
+// Created: 2024-06-10
+
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+Astro.redirect("/maintenance.astro");
+---
+
+<Layout title="Little Bead Studio - Handmade Jewelry">
+  <Hero />
+</Layout>

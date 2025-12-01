@@ -1,0 +1,66 @@
+/* global.css */
+
+:root {
+  --brand-color: #000000;
+  --text-color: #333;
+  --background: #fff;
+  --font-main: "Inter", sans-serif;
+
+  /* Font Families */
+  --font-sans: "Inter", "Poppins", "Helvetica Neue", Arial, sans-serif;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem; /* 12px – tiny labels */
+  --text-sm: 0.875rem; /* 14px – small text, metadata */
+  --text-base: 1rem; /* 16px – normal body text */
+  --text-lg: 1.125rem; /* 18px – large body text */
+  --text-xl: 1.25rem; /* 20px – small headings */
+  --text-2xl: 1.5rem; /* 24px – section headings */
+  --text-3xl: 1.875rem; /* 30px – big headings */
+  --text-4xl: 2.25rem; /* 36px – hero headings */
+  --text-5xl: 3rem; /* 48px – main hero display text */
+
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+
+  /* Font Weight */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: var(--background);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--brand-color);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: var(--text-4xl);
+  line-height: var(--leading-tight);
+}
+
+h2 {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+}
+
+h3 {
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+}
+
+p {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}

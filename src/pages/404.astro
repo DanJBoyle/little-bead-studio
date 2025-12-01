@@ -1,0 +1,51 @@
+---
+// File: 404.astro
+// Description: 404 Not Found page for Little Bead Studio website.
+// Author: Daniel Boyle
+// Created: 2024-06-10
+
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Page Not Found">
+  <section class="not-found">
+    <h1>404</h1>
+    <p>Oops! The page you’re looking for doesn’t exist.</p>
+
+    <a href="/" class="home-link">Go back home</a>
+  </section>
+
+  <style>
+    .not-found {
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    h1 {
+      font-size: 6rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-weight: 800;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .home-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: #000;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+
+    .home-link:hover {
+      opacity: 0.8;
+    }
+  </style>
+</Layout>

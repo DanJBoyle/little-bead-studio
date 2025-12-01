@@ -1,0 +1,49 @@
+---
+// File: products.astro
+// Description: Products page for Little Bead Studio website.
+// Author: Daniel Boyle
+// Created: 2024-06-10
+
+import Layout from "../layouts/Layout.astro";
+import ProductCard from "../components/ProductCard.astro";
+
+import { type CollectionEntry, getCollection } from "astro:content";
+
+const products: CollectionEntry<"products">[] = await getCollection("products");
+---
+
+<Layout title="Products • Little Bead Studio">
+  <section class="products">
+    <h1>Our Jewelry</h1>
+
+    <div class="grid">
+      {
+        products.map(({ data }) => (
+          <ProductCard
+            image={data.image}
+            name={data.name}
+            description={data.description}
+            price={data.price}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 2rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    align-items: stretch;
+  }
+</style>

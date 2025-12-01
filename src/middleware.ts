@@ -1,7 +1,7 @@
 import { defineMiddleware } from "astro/middleware";
 
 export const onRequest = defineMiddleware(async (context, next) => {
-  const MAINTENANCE = import.meta.env.MAINTENANCE_MODE === "on";
+  const MAINTENANCE = import.meta.env.PUBLIC_MAINTENANCE_MODE === "on";
   const pathname = context.url.pathname;
 
   // If not in maintenance mode → allow everything except maintenance page

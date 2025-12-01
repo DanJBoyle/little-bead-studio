@@ -25,10 +25,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
     return response; // show the real 404 page
   }
 
-  const origin = context.request.headers.get("x-forwarded-proto")
-    ? `${context.request.headers.get("x-forwarded-proto")}://${context.request.headers.get("host")}`
-    : `${context.url.protocol}//${context.url.host}`;
-
   // Otherwise - redirect everything else to maintenance
-  return Response.redirect(new URL("/maintenance", origin), 302);
+  return Response.redirect(new URL("/maintenance", context.url), 302);
 });

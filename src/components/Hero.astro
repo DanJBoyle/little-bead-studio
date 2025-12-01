@@ -1,0 +1,78 @@
+---
+// File: Hero.astro
+// Description: Hero component for Little Bead Studio website.
+// Author: Daniel Boyle
+// Created: 2024-06-10
+
+import { Image } from "astro:assets";
+import Button from "./Button.astro";
+
+import heroImage from "../assets/images/products/earring1.jpg";
+---
+
+<section class="hero">
+  <div class="hero-image">
+    <Image
+      src={heroImage}
+      alt="Handmade Jewelry"
+      class="img"
+      format="webp"
+      widths={[800, 1200, 1600]}
+      sizes="100vw"
+    />
+  </div>
+
+  <div class="overlay"></div>
+
+  <div class="text">
+    <h1>Little Bead Studio</h1>
+    <p>Handmade jewelry crafted with love and care.</p>
+    <Button href="/products" size="lg">View Collection</Button>
+  </div>
+</section>
+
+<style>
+  /* Container */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 95vh; /* nice hero height */
+    min-height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ✨ Astro Image wrapper */
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  /* ✨ Make the image cover properly */
+  .hero-image :global(picture),
+  .hero-image :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.55));
+    z-index: 0;
+  }
+
+  /* Text block */
+  .text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+</style>

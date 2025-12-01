@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Crystal Bead Earrings",
+    "price": 25,
+    "description": "A handcrafted earrings made with shimmering crystal beads.",
+    "image": "../assets/images/products/earring1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Crystal Bead Earrings",
+    "price": 25,
+    "description": "A handcrafted earrings made with shimmering crystal beads.",
+    "image": "../assets/images/products/earring1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Crystal Bead Earrings",
+    "price": 25,
+    "description": "A handcrafted earrings made with shimmering crystal beads.",
+    "image": "../assets/images/products/earring1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Crystal Bead Earrings",
+    "price": 25,
+    "description": "A handcrafted earrings made with shimmering crystal beads.",
+    "image": "../assets/images/products/earring1.jpg"
+  }
+]
